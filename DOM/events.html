@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Events</title>
+  </head>
+  <body>
+
+    <h1>DOM Events</h1>
+
+    <p>Here is a button</p>
+    <button type="button" name="button" id="click-button">CLICK!</button>
+
+    <p>With DOM Events we can point to some elements in our HTML page
+    and listen to different things activated by the user. In this example
+    we wait for the buttom being clicked and then we execute a function</p>
+
+    <p id="ex">See how this text changes!</p>
+
+    <p>We can also change other things like labels: JUST CLICK!</p>
+
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+
+    <p>Or change the background</p>
+
+    <button type="button" name="button" id="background-button">Change the background</button>
+
+  </body>
+  <script type="text/javascript">
+
+    var buttonA = document.querySelector ("#click-button");
+    var buttonB = document.querySelector ("#background-button")
+    var text = document.querySelector("#ex");
+    var lis = document.getElementsByTagName("li");
+    var isPurple = false;
+
+    buttonA.addEventListener("click", function(){
+      buttonA.textContent = "CLICKED";
+      text.textContent = "I have also changed."
+      text.style.background = "lightyellow";
+    });
+
+    //REMEBER THAT THIS EXAMPLE CAN BE MADE SO MUCH EASIER ADDING A class
+    //in THE CSS AND THEN APPLYING: body.classList.toggle.("className");
+    //BUUUUT... you can still doing this for practice:
+    buttonB.addEventListener("click", function(){
+
+      if(isPurple==true){
+        document.body.style.background = "white";
+        isPurple = false;
+      }else{
+        document.body.style.background = "purple";
+        isPurple =! isPurple;
+      }
+
+    });
+
+
+
+      //GOOD EXAMPLE to add an event listener to various elements.
+
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].addEventListener("click", function(){
+        this.style.color = "blue";
+      });
+    }
+
+    //There is no always need to use a callback function, we can declare a
+    //funtion and call it later.
+
+  </script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arrays</title>
+
+    <script type="text/javascript">
+
+      //create array
+      var colors = ["red","green","blue"];
+      console.log(colors[0]);
+
+      //add
+      colors[3]="black";
+      console.log(colors[3]);
+
+      //Using the length. Warning!
+      console.log(colors[colors.length-1]);
+
+      //add item after last one
+      colors.push("white");
+      console.log(colors[colors.length-1]);
+
+      //Remove last item and pass it.
+      var lastColor = colors.pop();
+      console.log(colors[colors.length-1]);
+      console.log(lastColor);
+
+      //add item at first position
+      colors.unshift("infrared");
+      console.log(colors[0]);
+
+      //Remove first item. Also pass it as pop
+      colors.shift();
+      console.log(colors[0]);
+
+      //Returns the frist element that match. -1 if it is not in the Arrays
+      console.log(colors.indexOf("green"));
+      console.log(colors.indexOf("Orange"));
+
+      //We use slice to copy certain parts of an array:
+      var someColors = colors.slice(2,4);
+      console.log(someColors);
+
+      //For loops in Arrays
+      for(var i = 0; i<colors.length; i++){
+        console.log(colors[i]);
+      }
+
+      //We can also use forEach, that iterate the array passing to a function
+      //every element in the array an then we can malipulate it for every itertion:
+      // The arguments are in a specific order:
+      // - The first one represents each element in the array (per loop iteration) that .forEach was called on.
+      // - The second represents the index of said element.
+      // - The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
+      colors.forEach(function(color){
+        console.log(color)
+      }); //If we are calling to an external fn do not include parenthesis
+
+      //TO remove an specific element and the following ones.
+      colors.splice(1,1);
+      console.log(colors);
+
+    </script>
+
+
+  </head>
+  <body>
+
+  </body>
+</html>

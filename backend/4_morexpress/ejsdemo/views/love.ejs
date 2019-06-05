@@ -1,0 +1,13 @@
+<!-- Partial: Header -->
+<% include partials/header %>
+
+<h1>You fell in love with a: <%=thingVar%></h1>
+
+<% if(thingVar.toLowerCase() === "rusty") { %>
+    <p>Good choice</p>
+<% } else { %>
+    <p>Try rusty</p>
+<% } %>
+
+<!-- We include a partial here, the footer -->
+<% include partials/footer  %>

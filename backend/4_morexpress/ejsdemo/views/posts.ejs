@@ -1,0 +1,13 @@
+<!-- Partial: Header -->
+<% include partials/header %>
+
+<h1>Posts:</h1>
+
+<% posts.forEach(function(post){ %>
+    
+    <li> <%= post.title%> - By:  <%= post.name%></li>
+    
+<% }); %>
+
+<!-- We include a partial here, the footer -->
+<% include partials/footer  %>

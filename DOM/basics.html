@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Basics DOM manipulation</title>
+    <style media="screen">
+      .high-class {
+        font-size: 15px;
+        color: blue;
+        background: lightyellow;
+      }
+
+      .bold-class {
+        text-shadow: 1px 1px grey;
+        font-style: bold;
+        color: black;
+        text-decoration: underline;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>DOM</h1>
+    <h2>Document Object Model</h2>
+
+    <p>Is the interface between HTML CSS y Javascript</p>
+    <p>When the browser reads an HTML page creates a data structure of
+    elemens where all the headers, par, reference are listed inside one element
+    that is call document, which wraps all the information. We can access to it
+    using <strong>console.dir(document)</strong>. </p>
+    <a href="link">My Link</a>
+
+    <h2 id="selec">DOM Methods for selection</h2>
+    <ul>
+      <li id="highlight">Getan element by an ID</li>
+      <li class="bolded">Get elements by a Class name</li>
+      <li class="bolded">Get elements by Tags</li>
+      <li>Query selector: We can replicate all the other methods using
+      the CSS language to selct IDs, classes, etc..</li>
+      <li>Query selector for all takes all the elements not just the first one.</li>
+    </ul>
+
+    <h2 id="manip">DOM Methods for manipulatiom</h2>
+    <h4>Also think that the manipulation that we are gonna see are just for
+    demonstration. There is no point to change the color of a title with
+    javascript if we can make it with css. What is interesting is used this When
+    certain things happen making things interactive.</h4>
+    <h4>We have to think about an important concept called:<i>Separation of
+    concerns.</i> Take a look at the image below</h4>
+
+    <img src="example.png" alt="">
+
+    <ul>
+      <li>HTML: Structure</li>
+      <li>CSS: Presentation</li>
+      <li>JS: Behaviour</li>
+    </ul>
+
+    <p id ="awesome">This is an <strong>awesome</strong> piece of information! </p>
+    <p id ="awesome2">This is an <strong>awesome</strong> piece of information! </p>
+
+  </body>
+
+
+  <!-- we put the script here to avoid errors. If we put this at the start the html
+  content has not loaded yet and we screw it up. -->
+  <script type="text/javascript">
+
+  //The idea is to select and manipulate:
+
+  var h1 = document.querySelector("h1");
+  h1.style.color = "red";
+  h1.style.fontSize = "70px";
+  h1.style.border = "10px solid black";
+  h1.style.textAlign = "center"; //See that we always put a string
+
+  //NOTICE HERE:
+  //That the code above is not dry or clean at all. We have to think about
+  //the separation of concers and insted of change everything in the JS file
+  //Use different classes modified with CSS and then use JS to trigger the
+  //change. See the example here:
+
+  //Get element by ID
+  //We add a class here to change some things at the same time
+  var tag = document.getElementById("highlight");
+  tag.classList.add("high-class"); // MUCH BETTER!!
+  //There are also more modifiers, see the next example:
+
+  //Get elements by class
+  var tags = document.getElementsByClassName("bolded");
+  tags[0].classList.toggle("bold-class"); //We switch the class. Very Useful!!
+  //See how does not apply here because we call it twice
+  tags[1].classList.toggle("bold-class");
+  tags[1].classList.toggle("bold-class");
+
+  // Get elemensts by tags
+  var moreTags = document.getElementsByTagName("li");
+  moreTags[3].style.color="red";
+
+  //To obtain the text inside:
+  var text = document.querySelector("#awesome");
+  text.textContent = "This is better than awesome!";
+  //The problem here is that we override tags inside the text, so there is
+  //another way to retreive the info with tags inside the elemets:
+
+  var text2 = document.querySelector("#awesome2");
+  //Now see that we can use tags also:
+  text2.innerHTML = "<h3>This is an <i>awesome</i> piece of information!</h3>";
+
+  //Query selector returns the first match:
+  //For IDs
+  var query = document.querySelector("#highlight");
+  //For Objects constructed from the HTML
+  var query = document.querySelector("h1");
+  //For classes
+  var query = document.querySelector(".bolded");
+
+  //If we want to select everything we can use:
+  var query = document.querySelectorAll("h2");
+
+
+
+
+  </script>
+
+</html>

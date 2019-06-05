@@ -1,0 +1,81 @@
+body{
+  background-color: #ffffff;
+}
+
+/* Title */
+
+.title {
+  float: left;
+  width: 30%;
+  margin: 0 35% 0 35%;
+  padding: 0 0 5% 0;
+  text-align: center;
+
+}
+  h1{
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 700;
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+  }
+
+    #tg {
+      text-align: left;
+    }
+
+    #cg{
+      text-align: right;
+    }
+
+/* Nav bar */
+
+.navbar {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 5px;
+  display: table;
+  table-layout: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+#reset {
+  display: table-cell;
+  text-align: left;
+}
+
+#message {
+  display: table-cell;
+  text-align: center;
+
+}
+
+#buttonsR {
+  display: table-cell;
+  text-align: right;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+
+/* Game table */
+
+
+.circles {
+  float: left;
+  width: 30%;
+  margin: 1.66%;
+  border-radius: 50%;
+  padding-bottom: 30%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}

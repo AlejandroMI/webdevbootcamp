@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FUNCTIONS</title>
+    <script type="text/javascript">
+
+    //SOME FUNCTIONS:
+
+    //implementetion
+    function isEven(n){
+      return n%2 === 0;
+    }
+
+    function factorial(n)  {
+      var result = n;
+       for(var i=n-1; i>=1; i--){
+         resutl *=i;
+       }
+       return result;
+    }
+
+    function kebabToSnake(str){
+      return str.replace(/-/g, "_");
+    }
+
+    console.log(isEven(4));
+    console.log(factorial(0));
+    console.log(kebabToSnake("hello-world"));
+
+    Higher Order Function
+
+    function sing() {
+      console.log("Twinkle, Twinle...")
+      console.log("Little Star...")
+    }
+
+    //Not use parentesis passing a function to other
+    setInterval(sing, 2000);
+
+    //We can also create a function only for this:
+    setInterval(function(){
+      console.log("LA LA LA!");
+    }, 4000);
+
+    </script>
+    
+  </head>
+
+  <body>
+
+  </body>
+</html>

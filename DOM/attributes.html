@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Attributes</title>
+  </head>
+  <body>
+
+  <a href="http://www.google.es">Link to google</a>
+
+
+  </body>
+
+  <script type="text/javascript">
+
+  //We are gonna see two methods to manipulate atributes:
+  //
+  // getAttribute("somerRef");
+  // setAttribute("someRef","newElement");
+
+  //WE cant loop through elements using forEach, have to use for loop
+
+  var aElement = document.querySelector("a");
+  link = aElement.getAttribute("href");
+  console.log(link);
+  aElement.setAttribute("href", "http://www.bing.es");
+  link = aElement.getAttribute("href");
+  console.log(link);
+
+  </script>
+</html>

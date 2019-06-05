@@ -1,0 +1,22 @@
+
+/* css */
+
+h1{
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 32px;
+  margin-left:1.66%;
+  border-bottom:4px solid lightgrey;
+  padding-bottom: 3px;
+  width:30%;
+}
+
+img{
+  width:30%;
+  float:left;
+  margin: 1.66%
+}
+
+p{
+  text-align: center;
+}

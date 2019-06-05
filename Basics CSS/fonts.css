@@ -1,0 +1,52 @@
+
+/* Css */
+
+body {
+  margin: 40px;
+}
+
+h1{
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 150px;
+  text-align: center;
+}
+
+h2 {
+ font-family: 'Cutive Mono', monospace;
+}
+
+p {
+
+  font-family: 'Cutive Mono', monospace;
+  font-size:16px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+span{
+  /* the use of em let us change the size of the text accordingly to the parent The idea is to set the body font size to whatever and then use em to assign sizes to the rest of the fonts*/
+  font-size: 1.5em;
+  font-weight: bold;  /* Also from 100 to 800 with google fonts */
+  text-decoration: line-through red;
+}
+
+.foot p{
+  font-size: 12px;
+  text-align:right;
+  font-weight: bold;
+  color:grey;
+}
+
+.box p{
+  /* width (in percent is for the parent element) and height */
+  width: 50%;
+  height: auto;
+  /* border */
+  border: 2px solid black;
+  /* padding */
+  padding: 16px;
+  /* margin top right bottom left: clockwise */
+  /* with auto we can center it */
+  margin: 10px 0px;
+}

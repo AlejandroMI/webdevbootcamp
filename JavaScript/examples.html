@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Examples and exercises JavaScript</title>
+    <script type="text/javascript">
+
+      console.log("ejercicio 1");
+      //Al numbers between -10 and 19
+      for (var i = -10; i<20; i++){
+        console.log(i);
+      }
+
+      console.log("ejercicio 2");
+      //Al the evens given two numbers
+      for (var i = 10; i<=40; i+=1){
+        if(i%2===0){
+          console.log(i);
+        }
+      }
+
+      console.log("ejercicio 3");
+      //Capitalize the first letter
+      function capitalizeFirst (str) {
+        if(typeof str === "number"){
+          return "This is not a String"
+        }
+          return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+
+      var  result = capitalizeFirst("paris");
+      console.log(result);
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

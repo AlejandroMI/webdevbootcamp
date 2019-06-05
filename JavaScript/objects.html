@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objects</title>
+  </head>
+
+  <script>
+
+  // ---- BASICS --- //
+
+  //Create a class and then the object.
+
+  class dog {
+
+    constructor(name,age,park){
+      this.name = name;
+      this.age = age;
+      this.park = park;
+    }
+  }
+
+  var dog1 = new dog("Rusty", 3, "Victoria Park");
+  console.log(dog1.age);
+
+  //adding things:
+  dog1.owner = "Paul Alley";
+  console.log(dog1.owner);
+
+
+  //Create objects:
+
+  var cat={
+    name: "Spots",
+    age: 6,
+    park: null
+  };
+
+  console.log(cat.name);
+
+  //We can add more things too or change this things:
+  cat.owner = "Alex";
+  cat.age = 7;
+  console.log("is "+ cat.owner + " cat.");
+  console.log("age:" + cat.age);
+
+  // ---- A more complex data structure ---- //
+  //here we mix arrays with objects.
+  
+  var movieDB = [
+    {
+      title:"Lord of the Rings",
+      rating: 10,
+      hasWatched:true
+    },
+
+      {title:"Lobster", rating: 9 , hasWatched:true},
+      {title:"American Idols", rating: 8.5 , hasWatched:false}
+  ]
+
+  movieDB.forEach(function(movie){
+    if(movie.hasWatched == true){
+      console.log("You have watched: " + movie.title + " rated with a " + movie.rating + "/10.");
+    }else{
+      console.log("You have not seen: " + movie.title + " rated with a " + movie.rating + "/10.");
+    }
+  });
+
+
+
+
+  </script>
+
+
+
+  <body>
+
+  </body>
+</html>

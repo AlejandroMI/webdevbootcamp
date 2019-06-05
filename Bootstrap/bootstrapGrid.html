@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Bootstrap Grid</title>
+  </head>
+
+  <style type="text/css">
+    .pink{
+      background: pink;
+      border: solid 2px teal;
+    }
+    .blue{
+      background: lightcyan;
+      border: solid 2px gold;
+    }
+
+  </style>
+  <body>
+
+    <div class="container">
+
+      <h1>Bootstrap Grid</h1>
+
+      <!-- Everytime using bootstrap gird must be inside of a container -->
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-6 col-sm-4 blue">ELEMENTO 1</div>
+          <div class="col-md-6 col-sm-8 blue">
+                <div class="row">
+                  <div class="col-lg-6">OH</div>
+                  <div class="col-lg- 6">AH</div>
+                </div>
+          </div>
+        </div>
+        <!-- We cant get rid of the large clas due that bootstrap will take the
+        medium class setting for the large one -->
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 pink">ELEMENTO 1</div>
+          <div class="col-lg-3 col-md-3 col-sm-6 pink">ELEMENTO 2</div>
+          <div class="col-lg-3 col-md-3 col-sm-6 pink">ELEMENTO 3</div>
+          <div class="col-lg-3 col-md-3 col-sm-6 pink">ELEMENTO 4</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+          <div class="col-lg-1 col-md-2">ELEM</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

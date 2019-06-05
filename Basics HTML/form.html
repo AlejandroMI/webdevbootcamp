@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms examples</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+
+    <form>
+      <label for="username">Username:</label>
+      <input id="username" name="username" type="email" placeholder="email"
+      required>
+      <label for="password">Password:</label>
+      <input id= "password" name="password" type="password" required>
+      <input type="submit">
+
+<!-- To make two radio buttons work for the same thing we have to add a name -->
+
+      <p>Do you prefer cats or dogs?</p>
+      <label for="cats">Cats</label>
+      <input id="cats" name="petChoice" type="radio" value="cats">
+      <label for="dogs">Dogs</label>
+      <input id="dogs" name="petChoice" type="radio" value="dog">
+
+<!-- This is to create a dropdown menu -->
+      <p>Which color do you prefer?</p>
+
+      <select class="" name="color">
+        <option value="orange">Orange</option>
+        <option value="grey">Grey</option>
+        <option value="black">Black</option>
+      </select>
+
+<!-- to crete more long inputs       -->
+      <p>How would you describe your perfect pet?</p>
+      <textarea name="description" rows="8" cols="80"></textarea>
+
+    </form>
+
+  </body>
+</html>
